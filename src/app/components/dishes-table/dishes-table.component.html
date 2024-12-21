@@ -1,0 +1,30 @@
+<div class="container pt-5">
+    <div class="row">
+        <div *ngIf="dishes.length == 0">
+            <h3> No dishes to show!</h3>
+        </div>
+        <table class="table table-striped" *ngIf="dishes.length!=0">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dish of dishes">
+                    <td >{{ dish.name}}</td>
+                    <td>{{ dish.description }}</td>
+                    <td>{{ dish.price | number: '1.2-2' }}&nbsp;DT</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-danger mr-1" (click)="deleteDishById(dish.id)"> 
+                            <i class="fas fa-trash-alt"></i>&nbsp;
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

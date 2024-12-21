@@ -1,0 +1,10 @@
+<img src="assets/img/food_menu/single_food_1.png" class="card-img-top" alt="{{dish.name}}">
+        
+<div class="card-body text-center">
+    <h3 class="card-title">{{dish.name}}</h3>
+    <p class="card-text description">{{dish.description}}</p>
+    <h5 class="card-price text-danger">{{dish.price | number:'1.2-2'}} DT</h5>
+    <button class="btn btn-outline-success mt-3" (click)="goToCart(dish.id)">
+        <i class="fas fa-info-circle"></i> More Details
+    </button>
+</div>

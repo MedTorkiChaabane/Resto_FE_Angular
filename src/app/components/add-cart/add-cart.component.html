@@ -1,0 +1,36 @@
+<!--::exclusive_item_part start::-->
+<section class="exclusive_item_part blog_item_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <h2>Dish Details</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="assets/img/food_item/food_item_1.png" alt="">
+                    </div>
+                    <div class="single_blog_text">
+                        <h3>{{dish.name}}</h3>
+                        <p>{{dish.description}}</p>
+                        <h3>{{dish.price | number:'1.2-2'}}&nbsp;DT</h3>
+                        <!-- Quantité -->
+                        <div class="quantity pb-1">
+                            <button (click)="decreaseQuantity()" class="btn btn-secondary">-</button>
+                            <input type="number" [value]="quantity" readonly class="quantity-input">
+                            <button (click)="increaseQuantity()" class="btn btn-secondary">+</button>
+                        </div>
+                        <button class="btn btn-primary" (click)="addReservation()">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--::exclusive_item_part end::-->

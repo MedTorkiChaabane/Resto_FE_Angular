@@ -1,0 +1,44 @@
+<!--::chefs_part start::-->
+<section class="chefs_part blog_item_section ">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <h2>User Informations</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+            </div>
+            <div class="col-sm-6 col-lg-5">
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="assets/img/team/user.png" alt="user_info" class="img-fluid rounded-circle"
+                            style="height: 250px;">
+                    </div>
+                    <div class="single_blog_text text-center">
+                        <h3>{{user.firstName}} {{user.lastName}}</h3>
+                        <h3 class="email-box">{{ user.email }}</h3>
+                        <h3>{{ user.phone }}</h3>
+                        <h3>{{ user.address }}</h3>
+                        <div  *ngIf="user.roles">
+                            <h3 *ngIf="user.roles[0].name == 'chef'">{{ user.speciality }}</h3>
+                            <h3 *ngIf="user.roles[0].name == 'chef'">{{ user.experience | experienceYear }}</h3>
+                        </div>
+                        <button class="button button-contactForm btn_4" (click)="goToEdit()"><i class="fas fa-edit"></i>&nbsp;Edit Profil</button>
+                        <div class="social_icon">
+                            <a href="#"> <i class="ti-facebook"></i> </a>
+                            <a href="#"> <i class="ti-twitter-alt"></i> </a>
+                            <a href="#"> <i class="ti-instagram"></i> </a>
+                            <a href="#"> <i class="ti-skype"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!--::chefs_part end::-->
